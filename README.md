@@ -1,4 +1,4 @@
-# Criptografía Bitcoin — Guía del Estudiante
+# Criptografía Bitcoin
 
 Vas a construir la maquinaria criptográfica real que impulsa Bitcoin — desde cero, en Java puro, usando únicamente la biblioteca estándar. Al terminar la Sesión 2 entenderás cómo Bitcoin prueba identidad sin contraseñas, y por qué falsificar una transacción es matemáticamente imposible.
 
