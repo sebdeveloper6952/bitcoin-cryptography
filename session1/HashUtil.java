@@ -55,7 +55,9 @@ public class HashUtil {
      * TODO: implementar este método.
      */
     public static String sha256(String text) throws NoSuchAlgorithmException {
-        throw new UnsupportedOperationException("TODO: implementar sha256");
+        byte[] bytes = MessageDigest.getInstance("SHA-256").digest(text.getBytes());
+
+        return HexFormat.of().formatHex(bytes);
     }
 
     // ------------------------------------------------------------------ //

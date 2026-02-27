@@ -76,7 +76,11 @@ public class Block {
      * TODO: implementar este método.
      */
     public void mine(int difficulty) {
-        throw new UnsupportedOperationException("TODO: implementar Block.mine()");
+       String target = "0".repeat(difficulty);
+       while (!hash.startsWith(target)) {
+           nonce++;
+           hash = calculateHash();
+       }
     }
 
     @Override

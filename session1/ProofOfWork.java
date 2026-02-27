@@ -61,7 +61,17 @@ public class ProofOfWork {
      * TODO: implementar este método.
      */
     public static long mine(String data, int difficulty) {
-        throw new UnsupportedOperationException("TODO: implementar mine");
+        String target = "0".repeat(difficulty);
+        long nonce = 0;
+        try {
+            while (true) {
+                String hash = HashUtil.sha256(data + nonce);
+                if (hash.startsWith(target)) return nonce;
+                nonce++;
+            }
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     // ------------------------------------------------------------------ //
